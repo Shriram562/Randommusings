@@ -1,0 +1,11 @@
+# _config.yml
+
+# Site title
+title: My Website
+
+# Theme
+theme: jekyll-theme-minimal
+
+# Plugins
+plugins:
+  - jekyll-redirect-from
