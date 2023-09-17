@@ -1,0 +1,59 @@
+!DOCTYPE html>
+<html>
+<head>
+  <title>Cricket Quiz</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .timer {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .typeform {
+      text-align: center;
+    }
+
+    .cricket-photo {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Cricket Quiz</h1>
+
+  <img class="cricket-photo" src="https://i.imgur.com/cricket-photo.jpg" alt="Cricket photo">
+
+  <div class="timer">120</div>
+
+  <div class="typeform">
+    <iframe src="https://yzen9wb9itj.typeform.com/to/H8QoIlWX" width="100%" height="500"></iframe>
+  </div>
+
+  <div class="out-of-time" style="display: none;">
+    <h1>Sorry, time's up!</h1>
+  </div>
+
+  <script>
+    // Start the timer.
+    var timer = 120;
+    setInterval(function() {
+      timer--;
+      document.querySelector('.timer').innerHTML = timer;
+
+      // If the timer reaches zero, disable the Typeform link and display the out-of-time message.
+      if (timer === 0) {
+        document.querySelector('.typeform').style.display = 'none';
+        document.querySelector('.out-of-time').style.display = 'block';
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
